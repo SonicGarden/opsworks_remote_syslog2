@@ -18,6 +18,7 @@ end
 
 package bin_file do
   action :install
-  source install_config['source_url']
+  #source install_config['source_url']
+  source install_config['download_path']
   not_if "rpm -qa | grep #{bin_file}"
 end
