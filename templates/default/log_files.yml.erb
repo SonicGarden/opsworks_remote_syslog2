@@ -1,12 +1,12 @@
 files:
-<% node['remote_syslog2']['config']['files'].each do |file| %>
+<% node['remote_syslog2']['files'].each do |file| %>
   - <%= file %>
 <% end %>
 destination:
-  host: <%= node['remote_syslog2']['config']['destination']['host'] %>
-  port: <%= node['remote_syslog2']['config']['destination']['port'] %>
+  host: <%= node['remote_syslog2']['destination']['host'] %>
+  port: <%= node['remote_syslog2']['destination']['port'] %>
   protocol: tls
 exclude_patterns:
-<% node['remote_syslog2']['config']['exclude_patterns'].each do |pattern| %>
+<% node['remote_syslog2']['exclude_patterns'].each do |pattern| %>
   - <%= pattern %>
 <% end %>

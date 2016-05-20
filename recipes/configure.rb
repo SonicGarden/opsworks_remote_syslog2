@@ -7,7 +7,7 @@ cookbook_file '/etc/init.d/remote_syslog' do
   action :create
 end
 
-template node['remote_syslog2']['config_file'] do
+template node['remote_syslog2']['install']['config_file'] do
   source 'log_files.yml.erb'
   mode 0644
   owner 'root'
